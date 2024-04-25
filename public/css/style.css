@@ -39,16 +39,20 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 90%;
+    margin: 0 auto;
 }
 
 .link-item {
     margin-bottom: 10px; 
+    width: 100%;
 }
 
 .link {
     display: flex;
     align-items: center;
-    width: 500px;
+    width: 100%;
+    /* max-width: 500px; */
     height: 50px;
     text-decoration: none;
     color: #fff;
@@ -67,6 +71,7 @@ h1 {
     font-weight: bold;
     font-size: 20px;
     font-family: 'Poppins', sans-serif;
+    flex-grow: 1;
 }
 
 .link-url {
@@ -92,6 +97,25 @@ h1 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
     margin: 0 10px;
     text-decoration: none; 
-    color: #fff; /* Color del ícono */
+    color: #fff;
     font-size: 30px;
+}
+
+@media only screen and (min-width: 600px) {
+    .link-list {
+        flex-direction: row; 
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+
+    .link-item {
+        margin-right: 10px; 
+        margin-bottom: 0; 
+        width: auto; 
+    }
+
+    .link {
+        width: auto; 
+        margin-bottom: 10px; 
+    }
 }
